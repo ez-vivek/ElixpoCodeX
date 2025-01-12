@@ -91,7 +91,7 @@ Contributions are welcome! To contribute:
 
 For support or inquiries, please contact:  
 - **GitHub Issues**: [Report an Issue](https://github.com/ez-vivek/ElixpoCodeX/issues)  
-- **LinkedIn**: [Manish Karmakar](https://www.linkedin.com/in/ezvivek)
+- **LinkedIn**: [Vivek Yadav](https://www.linkedin.com/in/ezvivek)
 
 
 Thank you for using **ElixpoCodeX**! Transform code between languages effortlessly.
