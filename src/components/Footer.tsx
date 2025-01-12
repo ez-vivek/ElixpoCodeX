@@ -6,11 +6,7 @@ export const Footer = () => {
     <footer className="border-t py-6">
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="text-sm text-muted-foreground">
-          Copyright &copy; {new Date().getFullYear()}{" "}
-          <a href="/">
-            ElixpoCode<span className="text-green-500">X</span>
-          </a>{" "}
-          | All rights reserved.
+          Copyright &copy; {new Date().getFullYear()}{" "} ElixpoCode<span className="text-purple-500"><b>X</b></span> | All rights reserved.
         </div>
         <Button variant="ghost" size="icon" asChild>
           <a

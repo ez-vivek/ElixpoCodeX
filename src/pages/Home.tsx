@@ -109,12 +109,12 @@ const Index = () => {
           className="text-center mb-12"
         >
           <h1 className="text-4xl font-bold mb-4">
-            ElixpoCode<span className="text-green-500">X</span>
+            ElixpoCode<span className="text-purple-500">X</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Transform your code between different programming languages with
-            ease. Our intelligent system helps you convert code while
-            maintaining its functionality.
+            ease, Our intelligent system helps you convert code while
+            maintaining its functionality <br></br>Made with 💜 & Collaboration with <a href="https://github.com/Circuit-Overtime" className="text-primary">Ayushman Bhattacharya.</a>
           </p>
         </motion.div>
 
@@ -383,11 +383,11 @@ const Index = () => {
                 </section>
 
                 <section className="bg-card rounded-lg p-6 shadow-lg border border-border/50">
-                    <div className="flex items-center gap-2 mb-4">
+                  <div className="flex items-center gap-2 mb-4">
                     <Award className="w-6 h-6 text-primary" />
                     <h3 className="text-xl font-semibold">Best Practices</h3>
-                    </div>
-                    <ul className="space-y-3">
+                  </div>
+                  <ul className="space-y-3">
                     {[
                       "Make sure your source code is free of syntax errors",
                       "Adopt clear and consistent naming conventions",
