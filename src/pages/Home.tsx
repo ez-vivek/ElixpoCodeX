@@ -86,20 +86,6 @@ const Index = () => {
     toast.success("Code switched successfully!");
   };
 
-  const handleClearData = () => {
-    setSourceCode("");
-    setTargetCode("");
-    setSourceLang("javascript");
-    setTargetLang("python");
-    toast.success("All data cleared successfully!");
-  };
-
-  const handleRemoveApiKey = () => {
-    localStorage.removeItem("GEMINI_API_KEY");
-    handleClearData();
-    toast.success("API key removed and data cleared successfully!");
-  };
-
   useEffect(() => {
     const handleBeforeUnload = () => {
       localStorage.removeItem("GEMINI_API_KEY");
@@ -257,9 +243,7 @@ const Index = () => {
                 Transform Code
               </RainbowButton>
             </motion.div>
-            <button onClick={handleRemoveApiKey}>Remove API Key</button>
           </TabsContent>
-
           <TabsContent value="features">
             <motion.div
               initial={{ opacity: 0 }}
