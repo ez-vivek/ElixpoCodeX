@@ -59,7 +59,7 @@ const Index = () => {
       setTargetCode(convertedCode);
       toast.dismiss();
       toast.success("Code converted successfully!");
-    } catch (error) {
+    } catch {
       toast.dismiss();
       toast.error("Failed to convert code. Please try again.");
     }
@@ -71,7 +71,7 @@ const Index = () => {
       toast.success(
         `${type === "source" ? "Source" : "Target"} code copied to clipboard!`
       );
-    } catch (err) {
+    } catch {
       toast.error("Failed to copy code");
     }
   };
