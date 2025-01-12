@@ -5,6 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import Home from "./pages/Home";
+import Signin from "./pages/signin";
+import Signup from "./pages/signup";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +19,12 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
+          </Routes>
+          <Routes>
+            <Route path="/signin" element={<Signin />} />
+          </Routes>
+          <Routes>
+            <Route path="/signup" element={<Signup />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>

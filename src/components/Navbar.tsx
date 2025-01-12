@@ -13,8 +13,10 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { toast } from "sonner";
 import { Eye, EyeOff, Menu } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export function Navbar() {
+  const navigate = useNavigate();
   const [apiKey, setApiKey] = useState("");
   const [showApiKey, setShowApiKey] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -38,47 +40,43 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
-        <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2">
           <a href="/" className="flex items-center gap-2 font-bold">
             <Logo />
           </a>
+          <p className="text-2xl font-bold text-primary text-amber-200">
+            CodeX
+          </p>
         </div>
 
         <div className="flex items-center ml-auto gap-4">
-          <div className="hidden md:flex items-center gap-2">
-            <div className="relative flex items-center">
-              <Input
-                type={showApiKey ? "text" : "password"}
-                placeholder="Enter Gemini API Key"
-                value={apiKey}
-                onChange={(e) => setApiKey(e.target.value)}
-                className="w-[240px] pr-10"
-              />
-              <Button
-                variant="ghost"
-                size="icon"
-                type="button"
-                className="absolute right-0"
-                onClick={() => setShowApiKey(!showApiKey)}
-              >
-                {showApiKey ? (
-                  <EyeOff className="h-4 w-4" />
-                ) : (
-                  <Eye className="h-4 w-4" />
-                )}
-              </Button>
-            </div>
-            <Button
-              variant="outline"
-              onClick={handleSaveApiKey}
-              className="shrink-0"
-            >
-              Save
-            </Button>
-          </div>
-
           <div className="flex items-center">
             <ModeToggle />
+
+                    <Button
+              variant="default"
+              size="sm"
+              className="ml-5"
+              onClick={() => {
+                // Add your sign-in logic here
+               navigate("/signin")
+              }}
+            >
+              Sign In
+            </Button>
+
+                <Button
+      variant="outline"
+      size="sm"
+      className="ml-5 border-white"
+      onClick={() => {
+        navigate("/signup"); // Ensure "navigate" is defined in your scope
+      }}
+      >
+      Sign Up
+      </Button>
+
+
 
             <div className="md:hidden">
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -160,16 +158,6 @@ export function Navbar() {
                         </div>
                       </motion.div>
 
-                      <motion.div
-                        className="p-6 border-t border-border/50 bg-muted/50"
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.3 }}
-                      >
-                        <p className="text-xs text-muted-foreground text-center">
-                          Get your API key from the Gemini dashboard
-                        </p>
-                      </motion.div>
                     </motion.div>
                   </AnimatePresence>
                 </SheetContent>

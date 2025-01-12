@@ -21,6 +21,9 @@ import {
   FileText,
   Award,
   Star,
+  Icon,
+  Package,
+  Key,
 } from "lucide-react";
 import {
   Card,
@@ -116,6 +119,8 @@ const Index = () => {
             ease, Our intelligent system helps you convert code while
             maintaining its functionality <br></br>Made with 💜 & Collaboration with <a href="https://github.com/Circuit-Overtime" className="text-primary">Ayushman Bhattacharya.</a>
           </p>
+            <p className="text-lg text-primary mt-4 text-red-400">
+            </p>
         </motion.div>
 
         <Tabs defaultValue="editor" className="mb-12">
@@ -265,10 +270,10 @@ const Index = () => {
                     "Transforms code intelligently while preserving its functionality and readability.",
                 },
                 {
-                  icon: BookOpen,
-                  title: "Documentation",
+                  icon: Key,
+                  title: "Integrated Key",
                   description:
-                    "Provides detailed documentation and examples for each supported language.",
+                    "Integrated Cloud API to provide faster service and no user API dependency",
                 },
                 {
                   icon: Copy,
@@ -282,6 +287,12 @@ const Index = () => {
                   description:
                     "Enables instant switching between source and target code while maintaining formatting.",
                 },
+                {
+                  icon : Package,
+                  title : "Package Consistency",
+                  description: 
+                  "Allows Quick mentions of compatible packages from version to version"
+                }
               ].map((feature, index) => (
                 <motion.div
                   key={feature.title}
