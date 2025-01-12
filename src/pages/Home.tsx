@@ -102,7 +102,7 @@ const Index = () => {
 
   useEffect(() => {
     const handleBeforeUnload = () => {
-      localStorage.clear();
+      localStorage.removeItem("GEMINI_API_KEY");
     };
 
     window.addEventListener("beforeunload", handleBeforeUnload);
@@ -257,6 +257,7 @@ const Index = () => {
                 Transform Code
               </RainbowButton>
             </motion.div>
+            <button onClick={handleRemoveApiKey}>Remove API Key</button>
           </TabsContent>
 
           <TabsContent value="features">
