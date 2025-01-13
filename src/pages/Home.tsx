@@ -21,7 +21,6 @@ import {
   FileText,
   Award,
   Star,
-  Icons,
   //removed Icon, because its value not decleared and no use at here
   Package,
   Key,
